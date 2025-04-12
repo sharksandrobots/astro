@@ -1,9 +1,7 @@
 import { defineConfig } from 'astro/config';
-import node from '@astrojs/node';
 
 export default defineConfig({
-  output: 'server',
-  adapter: node({
-    mode: 'standalone' // This is important for Digital Ocean
-  }),
+  output: 'static',
+  // If you've customized the output directory, check it here
+  outDir: './dist'
 });
